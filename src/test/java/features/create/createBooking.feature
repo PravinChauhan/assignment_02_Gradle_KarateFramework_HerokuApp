@@ -11,6 +11,8 @@ Feature:Create A Restful Booker For HerokuApp
     And request read ('classpath:features/create/body.json')
     When method POST
     Then status 200
-    And print 'createResponse: ', response
     And match response.[*].firstname == "#present", "#string", "#notnull"
     And match response.[*].lastname == "#present", "#string", "#notnull"
+    And def id = response.bookingid
+    And print id
+    And print 'createResponse: ', response

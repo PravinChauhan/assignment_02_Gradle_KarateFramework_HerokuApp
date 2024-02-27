@@ -1,5 +1,5 @@
 function fn() {
-  var env = karate.env; // get system property 'karate.env'
+  var env = karate.env;
   karate.log('karate.env system property was:', env);
   karate.configure('logPrettyRequest', true); karate.configure('logPrettyResponse', true);
   if (!env) {
