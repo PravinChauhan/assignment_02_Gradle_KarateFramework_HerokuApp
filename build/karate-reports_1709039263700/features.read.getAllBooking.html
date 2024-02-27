@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>features.read.getAllBooking</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2024-02-27 06:23:41 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:6]"><span>[1:6]</span> <span>Read restful booker herokuapp</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">features/read/getAllBooking.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">HerokuApp - Read</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:6]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:6]</span>
+                <span class="scenario-name">Read restful booker herokuapp</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>0</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:6]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:6]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>url apiUrl</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">18:23:35.883 karate.env system property was: null 
+18:23:40.381 this thread waited 4487 milliseconds for callSingle lock: classpath:features/token/createToken.feature
+18:23:40.385 callSingle() cached result is an exception
+18:23:40.407 classpath:features/read/getAllBooking.feature:4
+* url apiUrl
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref failed">7</div>
+      
+      <div class="step-cell failed">
+        <span>Given</span>&nbsp;<span>path &#39;booking&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.7">18:23:40.431 classpath:features/read/getAllBooking.feature:7
+Given path &#39;booking&#39;
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref failed">8</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.8">18:23:40.431 classpath:features/read/getAllBooking.feature:8
+When method GET
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref failed">9</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">18:23:40.431 classpath:features/read/getAllBooking.feature:9
+Then status 200
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+classpath:features/read/getAllBooking.feature:9
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref failed">10</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>assert responseTime &lt; 4000</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.10">18:23:40.431 classpath:features/read/getAllBooking.feature:10
+And assert responseTime &lt; 4000
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+classpath:features/read/getAllBooking.feature:9
+classpath:features/read/getAllBooking.feature:10
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref failed">11</div>
+      
+      <div class="step-cell failed">
+        <span>*</span>&nbsp;<span>def getResponse = response</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">18:23:40.431 classpath:features/read/getAllBooking.feature:11
+* def getResponse = response
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+classpath:features/read/getAllBooking.feature:9
+classpath:features/read/getAllBooking.feature:10
+classpath:features/read/getAllBooking.feature:11
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref failed">13</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.[*].firstname == &quot;#present&quot;, &quot;#string&quot;, &quot;#notnull&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">18:23:40.431 classpath:features/read/getAllBooking.feature:13
+And match response.[*].firstname == &quot;#present&quot;, &quot;#string&quot;, &quot;#notnull&quot;
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+classpath:features/read/getAllBooking.feature:9
+classpath:features/read/getAllBooking.feature:10
+classpath:features/read/getAllBooking.feature:11
+classpath:features/read/getAllBooking.feature:13
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref failed">14</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.[*].lastname == &quot;#present&quot;, &quot;#string&quot;, &quot;#notnull&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.14">18:23:40.431 classpath:features/read/getAllBooking.feature:14
+And match response.[*].lastname == &quot;#present&quot;, &quot;#string&quot;, &quot;#notnull&quot;
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+classpath:features/read/getAllBooking.feature:9
+classpath:features/read/getAllBooking.feature:10
+classpath:features/read/getAllBooking.feature:11
+classpath:features/read/getAllBooking.feature:13
+classpath:features/read/getAllBooking.feature:14
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref failed">15</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.[*].totalprice == &quot;#present&quot;, &quot;#number&quot;, &quot;#notnull&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">18:23:40.431 classpath:features/read/getAllBooking.feature:15
+And match response.[*].totalprice == &quot;#present&quot;, &quot;#number&quot;, &quot;#notnull&quot;
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+classpath:features/read/getAllBooking.feature:9
+classpath:features/read/getAllBooking.feature:10
+classpath:features/read/getAllBooking.feature:11
+classpath:features/read/getAllBooking.feature:13
+classpath:features/read/getAllBooking.feature:14
+classpath:features/read/getAllBooking.feature:15
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref failed">16</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.[*].depositpaid == &quot;#present&quot;, &quot;#boolean&quot;, &quot;#notnull&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.16">18:23:40.431 classpath:features/read/getAllBooking.feature:16
+And match response.[*].depositpaid == &quot;#present&quot;, &quot;#boolean&quot;, &quot;#notnull&quot;
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+classpath:features/read/getAllBooking.feature:9
+classpath:features/read/getAllBooking.feature:10
+classpath:features/read/getAllBooking.feature:11
+classpath:features/read/getAllBooking.feature:13
+classpath:features/read/getAllBooking.feature:14
+classpath:features/read/getAllBooking.feature:15
+classpath:features/read/getAllBooking.feature:16
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref failed">17</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.[*].[*].checkin == &quot;#present&quot;, &quot;#date&quot;, &quot;#notnull&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.17">18:23:40.431 classpath:features/read/getAllBooking.feature:17
+And match response.[*].[*].checkin == &quot;#present&quot;, &quot;#date&quot;, &quot;#notnull&quot;
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+classpath:features/read/getAllBooking.feature:9
+classpath:features/read/getAllBooking.feature:10
+classpath:features/read/getAllBooking.feature:11
+classpath:features/read/getAllBooking.feature:13
+classpath:features/read/getAllBooking.feature:14
+classpath:features/read/getAllBooking.feature:15
+classpath:features/read/getAllBooking.feature:16
+classpath:features/read/getAllBooking.feature:17
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref failed">18</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.[*].[*].checkout == &quot;#present&quot;, &quot;#date&quot;, &quot;#notnull&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.18">18:23:40.431 classpath:features/read/getAllBooking.feature:18
+And match response.[*].[*].checkout == &quot;#present&quot;, &quot;#date&quot;, &quot;#notnull&quot;
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+classpath:features/read/getAllBooking.feature:9
+classpath:features/read/getAllBooking.feature:10
+classpath:features/read/getAllBooking.feature:11
+classpath:features/read/getAllBooking.feature:13
+classpath:features/read/getAllBooking.feature:14
+classpath:features/read/getAllBooking.feature:15
+classpath:features/read/getAllBooking.feature:16
+classpath:features/read/getAllBooking.feature:17
+classpath:features/read/getAllBooking.feature:18
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref failed">19</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.[*].additionalneeds == &quot;#present&quot;, &quot;#string&quot;, &quot;#notnull&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.19">18:23:40.438 classpath:features/read/getAllBooking.feature:19
+And match response.[*].additionalneeds == &quot;#present&quot;, &quot;#string&quot;, &quot;#notnull&quot;
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+classpath:features/read/getAllBooking.feature:9
+classpath:features/read/getAllBooking.feature:10
+classpath:features/read/getAllBooking.feature:11
+classpath:features/read/getAllBooking.feature:13
+classpath:features/read/getAllBooking.feature:14
+classpath:features/read/getAllBooking.feature:15
+classpath:features/read/getAllBooking.feature:16
+classpath:features/read/getAllBooking.feature:17
+classpath:features/read/getAllBooking.feature:18
+classpath:features/read/getAllBooking.feature:19
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref failed">21</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>print &#39;getResponse: &#39;, response</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.21">18:23:40.438 classpath:features/read/getAllBooking.feature:21
+And print &#39;getResponse: &#39;, response
+&gt;&gt; classpath:features/read/getAllBooking.feature:6
+&gt;&gt; karate-config.js failed
+&gt;&gt; js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: function fn() {
+02:   var env = karate.env; // get system property &#39;karate.env&#39;
+03:   karate.log(&#39;karate.env system property was:&#39;, env);
+04:   karate.configure(&#39;logPrettyRequest&#39;, true); karate.configure(&#39;logPrettyResponse&#39;, true);
+05:   if (!env) {
+06:     env = &#39;dev&#39;;
+07:   }
+08:   var config = {
+09:   	  apiUrl: &#39;https://restful-booker.herokuapp.com/&#39;
+10:     }
+11:   if (env == &#39;dev&#39;){
+12:   config.username = &#39;admin&#39;
+13:   config.password = &#39;password123&#39;
+14:   }
+15:  var accessToken = karate.callSingle(&#39;classpath:features/token/createToken.feature&#39;, config).accessToken
+16:   karate.configure(&#39;headers&#39;, {Authorization: &#39;Token &#39; + accessToken})
+17: 
+18:   return config;
+19: }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: did not evaluate to &#39;true&#39;: responseTime &lt; 4000
+classpath:features/token/createToken.feature:21
+- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
+- &lt;js&gt;.fn(Unnamed:15)
+
+- com.intuit.karate.graal.JsEngine.fromJsEvalException(JsEngine.java:230)
+- com.intuit.karate.core.ScenarioEngine.executeJsValue(ScenarioEngine.java:1244)
+- com.intuit.karate.core.ScenarioEngine.executeFunction(ScenarioEngine.java:1227)
+- com.intuit.karate.core.ScenarioEngine.getOrEvalAsMap(ScenarioEngine.java:1216)
+- com.intuit.karate.core.ScenarioRuntime.evalConfigJs(ScenarioRuntime.java:291)
+- com.intuit.karate.core.ScenarioRuntime.beforeRun(ScenarioRuntime.java:369)
+- com.intuit.karate.core.ScenarioRuntime.run(ScenarioRuntime.java:395)
+
+classpath:features/read/getAllBooking.feature:4
+classpath:features/read/getAllBooking.feature:7
+classpath:features/read/getAllBooking.feature:8
+classpath:features/read/getAllBooking.feature:9
+classpath:features/read/getAllBooking.feature:10
+classpath:features/read/getAllBooking.feature:11
+classpath:features/read/getAllBooking.feature:13
+classpath:features/read/getAllBooking.feature:14
+classpath:features/read/getAllBooking.feature:15
+classpath:features/read/getAllBooking.feature:16
+classpath:features/read/getAllBooking.feature:17
+classpath:features/read/getAllBooking.feature:18
+classpath:features/read/getAllBooking.feature:19
+classpath:features/read/getAllBooking.feature:21
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
